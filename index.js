@@ -4,10 +4,8 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 
-// CORS ayarları
 app.use(cors());
 
-// Statik tatil verisi
 const holidays = [
     {
         country: 'Almanya',
@@ -114,7 +112,6 @@ app.get('/holidays', (req, res) => {
     res.json(filteredHolidays);
 });
 
-// Sunucu başlatma
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
